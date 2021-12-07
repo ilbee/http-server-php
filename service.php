@@ -32,7 +32,7 @@ do {
     $response = '<html><body>Hello World!</body></html>';
 
     $msg = "HTTP/1.0 200 Success\n";
-    $msg .= "Content-Length: ".strlen($response - 8)."\n\n";
+    $msg .= "Content-Length: ".strlen($response)."\n\n";
     $msg .= $response;
     socket_write($msgsock, $msg, strlen($msg));
 
